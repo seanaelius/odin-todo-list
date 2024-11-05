@@ -1,8 +1,6 @@
-export {create_element}
-
-function create_element(type, classList, text) {
+export default function create_element(type, classList, text) {
     //########################### CREATE ELEMENT ###########################
-    var ele = document.createElement(`${type}`)
+    let ele = document.createElement(`${type}`)
 
     //########################### ADD CLASS NAMES ###########################
     if ( classList != null ) {
