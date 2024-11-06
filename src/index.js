@@ -16,6 +16,10 @@ let task1 = new ToDo("Task1","Task1Desc", format(new Date(2020,1,12), "yyyy-MM-d
 let task2 = new ToDo("Task2","Task2Desc", format(new Date(2020,1,12), "yyyy-MM-dd"), "high")
 let task3 = new ToDo("Task3","Task3Desc",format(new Date(2020,3,3),"yyyy-MM-dd'"), "high", "Proj1")
 
-console.log(task1)
-console.log(task2)
-console.log(task3)
+/*
+A "project" will be an empty array that will store the "ToDos" that pertain to that specific project.
+*/
+
+let Proj1 = [];
+Proj1.push(task1, task2, task3)
+console.log(Proj1)
