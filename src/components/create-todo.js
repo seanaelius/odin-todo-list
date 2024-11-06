@@ -14,6 +14,19 @@ Nice to have:
 notes
 checklist
 
-We now need to create a class/object constructor that when called will create an object and console.log it.
+We now need to create a class/object constructor that when called will create an object and console.log it to test, and create another class/object constructor that
+will manipulate the DOM.
 
 */
+
+export default class ToDo {
+
+    constructor(title, desc, date, prio, proj = "NA"){
+        this.title = title;
+        this.desc = desc;
+        this.date = date;
+        this.prio = prio;
+        this.proj = proj;
+    }
+
+}
