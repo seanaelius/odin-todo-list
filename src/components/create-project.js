@@ -19,7 +19,7 @@ class project{
     }
 
     incomplete(task) {
-        let index = this.task_list.indexOf(task)
+        let index = this.completed_task_list.indexOf(task)
         this.completed_task_list.splice(index, 1)
         this.task_list.push(task)
     }
