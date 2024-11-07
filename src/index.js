@@ -8,13 +8,24 @@ content.appendChild(create_element("h1",['introduction','title'],"Hello"))
 import {createToDo, dueDate} from "./components/create-todo";
 import project from "./components/create-project";
 
-let task1 = createToDo("Task1","Task1Desc",dueDate(2020,1,30))
-let task2 = createToDo("Task2","Task2Desc",dueDate(2020,1,31))
+let task1 = createToDo("Task1","Task1Desc", dueDate(2020,1,30), "high")
+let task2 = createToDo("Task2","Task2Desc", dueDate(2020,1,31), "high")
+let task3 = createToDo("Task3","Task3Desc", dueDate(2020,1,31), "high")
 
-let Proj1 = new project("Proj1")
+let defaultProj = new project("default")
 
-Proj1.addTask(task1)
-Proj1.addTask(task2)
+defaultProj.addTask(task1)
+defaultProj.addTask(task2)
+defaultProj.addTask(task3)
 
-console.log(Proj1.title)
-console.log(Proj1.displayList())
+defaultProj.complete(task2)
+
+task1.changePrio("low")
+
+console.log(defaultProj)
+
+defaultProj.incomplete(task2)
+
+console.log(defaultProj)
+
+let completeProj = new project("completed")

@@ -3,11 +3,16 @@ import { compareAsc, format } from "date-fns";
 
 class ToDo {
 
-    constructor(title, desc, date, prio = "high"){
+    constructor(title, desc, date, prio, proj = "default"){
         this.title = title;
         this.desc = desc;
         this.date = date;
         this.prio = prio;
+        this.proj = proj;
+    }
+
+    changePrio(prio) {
+        this.prio = prio
     }
 
 }
