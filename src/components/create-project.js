@@ -24,6 +24,11 @@ class project{
         this.task_list.push(task)
     }
 
+    delete(task){
+        let index = this.task_list.indexOf(task)
+        this.task_list.splice(index, 1)
+    }
+
 //########################### DEBUGGING ########################### 
     displayList() {
         return this.task_list
