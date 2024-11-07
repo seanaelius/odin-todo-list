@@ -2,8 +2,6 @@ import "./styles.css"
 import { compareAsc, format } from "date-fns";
 
 import create_element from "./components/create-element"
-import create_project from "./components/create-project"
-import create_todo from "./components/create-todo"
 
 //########################### TEST CREATE H1 w/ CLASS LIST AND TEXT ###########################
 export const content = document.querySelector("#content")
@@ -20,6 +18,21 @@ let task3 = new ToDo("Task3","Task3Desc",format(new Date(2020,3,3),"yyyy-MM-dd'"
 A "project" will be an empty array that will store the "ToDos" that pertain to that specific project.
 */
 
-let Proj1 = [];
-Proj1.push(task1, task2, task3)
-console.log(Proj1)
+
+function createToDo(name, desc, due, prio) {
+    let task = new ToDo(`${name}`,`${desc}`,due,`${prio}`)
+}
+
+function dueDate(year, month, day){  
+    let date = format(new Date(year,month,day), "yyyy-MM-dd")
+    return date
+}
+
+import project from "./components/create-project";
+
+let Proj1 = new project("Proj1")
+
+Proj1.addTask(task1)
+Proj1.addTask(task2)
+console.log(Proj1.title)
+console.log(Proj1.displayList())
