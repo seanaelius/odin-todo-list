@@ -5,9 +5,8 @@ import create_element from "./components/create-element"
 export const content = document.querySelector("#content")
 content.appendChild(create_element("h1",['introduction','title'],"Hello"))
 
-import {createToDo, dueDate} from "./components/create-todo";
-import project from "./components/create-project";
-import createProject from "./components/create-project";
+import {createToDo, dueDate} from "./components/create-todo-object";
+import createProject from "./components/create-project-object";
 
 let defaultProj = createProject("default")
 let completeProj = createProject("complete")
