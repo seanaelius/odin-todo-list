@@ -18,8 +18,10 @@ We now need to create a class/object constructor that when called will create an
 will manipulate the DOM.
 
 */
+export {createToDo, dueDate}
+import { compareAsc, format } from "date-fns";
 
-export default class ToDo {
+class ToDo {
 
     constructor(title, desc, date, prio = "high"){
         this.title = title;
@@ -27,4 +29,15 @@ export default class ToDo {
         this.date = date;
         this.prio = prio;
     }
+
+}
+
+function createToDo(name, desc, due, prio) {
+    let task = new ToDo(`${name}`,`${desc}`,due,`${prio}`)
+    return task
+}
+
+function dueDate(year, month, day){  
+    let date = format(new Date(year,month,day), "yyyy-MM-dd")
+    return date
 }

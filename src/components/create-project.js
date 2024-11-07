@@ -15,3 +15,7 @@ export default class project{
     }
     
 }
+
+/*
+A "project" will be an empty array that will store the "ToDos" that pertain to that specific project.
+*/
