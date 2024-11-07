@@ -1,4 +1,4 @@
-export default class project{
+class project{
 
     constructor(title){
         this.title = title;
@@ -38,3 +38,8 @@ export default class project{
 /*
 A "project" will be an empty array that will store the "ToDos" that pertain to that specific project.
 */
+
+export default function createProject(title) {
+    let proj = new project(`${title}`)
+    return proj
+}
