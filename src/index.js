@@ -11,8 +11,8 @@ import createProject from "./components/create-project-object";
 let defaultProj = createProject("default")
 let completeProj = createProject("complete")
 
-/*
-LEGACY TESTING
+
+//LEGACY TESTING
 let task1 = createToDo("Task1","Task1Desc", dueDate(2020,1,29), "high")
 let task2 = createToDo("Task2","Task2Desc", dueDate(2020,1,31), "med")
 let task3 = createToDo("Task3","Task3Desc", dueDate(2020,1,31), "low")
@@ -29,4 +29,6 @@ console.log(defaultProj)
 
 defaultProj.incomplete(task2)
 console.log(defaultProj)
-*/
+
+import { updatePage } from "./components/DOM";
+
